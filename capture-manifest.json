@@ -1,91 +1,108 @@
 {
-  "title": "NearMeWiki \u2014 profile walkthrough",
-  "subtitle": "Real interface, fictional business data",
+  "title": "NearMeWiki \u2014 product walkthrough",
+  "subtitle": "Real interface captures featuring Andale Taqueria (used with permission)",
   "source": {
-    "runtime": "Isolated Flutter 3.41.1 widget test renderer",
-    "driver": "flutter test golden capture",
+    "runtime": "Local Docker Compose stack with Flutter 3.41.1 web frontend",
+    "driver": "Playwright Chromium browser capture against live Flutter web canvas",
     "generated_ui": false,
-    "synthetic_data": true,
-    "captured_at": "2026-09-20T18:51:00.304055+00:00",
-    "third_party_business_media": false
+    "synthetic_data": false,
+    "captured_at": "2026-09-20T20:18:58.716008+00:00",
+    "permission_record": "andale-owner-permission-2026-09-20"
   },
   "journeys": [
     {
-      "id": "profile",
-      "title": "Juniper Workshop (fictional)",
+      "id": "andale-taqueria-showcase",
+      "title": "Andale Taqueria & Mercado",
       "master_frame": 0,
       "frames": [
         {
-          "path": "media/profile-desktop-overview.png",
-          "title": "Desktop \u2014 profile overview",
-          "caption": "Actual profile widget with fictional business data. Contact actions and profile narrative.",
-          "state_id": "desktop-expanded",
-          "subject_id": "fictional-juniper-workshop",
-          "selector_strategy": "Flutter widget types, scroll-view key, and visible item text",
+          "path": "media/map-andale.png",
+          "title": "Map & search results",
+          "caption": "Local vector map tiles and the Andale Taqueria result card with watercolor thumbnail.",
+          "state_id": "map-andale",
+          "subject_id": "andale-taqueria",
+          "selector_strategy": "Flutter accessibility labels and text; result card coordinates",
           "action_path": [
-            "render profile widget with synthetic fixture"
+            "launch application",
+            "search 'Andale Taqueria'",
+            "focus map result"
           ],
           "viewport": {
-            "width": 1100,
-            "height": 900
+            "width": 1440,
+            "height": 1000
           },
-          "sha256": "53f1fcd98bf18f0cd9da47a6ebcf2888532afa1bae2f84d4c9deca4ea4eb706b"
+          "sha256": "b1be195c5d75ee07d939f067bb2192ea11586004e75984166678e957c9958710"
+        },
+        {
+          "path": "media/profile-desktop-overview.png",
+          "title": "Desktop \u2014 profile overview",
+          "caption": "Preserved watercolor header, practical details, and business story.",
+          "state_id": "desktop-overview",
+          "subject_id": "andale-taqueria",
+          "selector_strategy": "Flutter accessibility labels and text",
+          "action_path": [
+            "select Andale Taqueria from map",
+            "open business profile sheet"
+          ],
+          "viewport": {
+            "width": 1200,
+            "height": 1060
+          },
+          "sha256": "f648d55bbe0d560eb70f25615bdea7514f9e3e9ed53340147772ac49312d33b7"
         },
         {
           "path": "media/profile-desktop-catalog.png",
           "title": "Desktop \u2014 catalog detail",
-          "caption": "Actual profile widget with fictional business data. Scrolled catalog with Sketchbook expanded.",
-          "state_id": "desktop-collapsed",
-          "subject_id": "fictional-juniper-workshop",
-          "selector_strategy": "Flutter widget types, scroll-view key, and visible item text",
+          "caption": "Scrolled catalog with section navigation chips and expanded Pork Pastor Taco offering.",
+          "state_id": "desktop-catalog",
+          "subject_id": "andale-taqueria",
+          "selector_strategy": "Flutter accessibility labels and text",
           "action_path": [
-            "render profile widget with synthetic fixture",
-            "drag profile scroll view upward",
-            "ensure Sketchbook is visible",
-            "tap Sketchbook",
-            "wait for description"
+            "open business profile",
+            "scroll to catalog",
+            "expand 'Pork Pastor Taco'"
           ],
           "viewport": {
-            "width": 1100,
-            "height": 900
+            "width": 1200,
+            "height": 1060
           },
-          "sha256": "cabf95e890072b5e9ff9d7075bb6b6cbbde78292d81ad499b48b5f047d699194"
+          "sha256": "49aa9539b3ac8b7f1ecc1731d02c2ec573bae742fa29797ff1abc465d2e696fc"
         },
         {
           "path": "media/profile-mobile-overview.png",
           "title": "Mobile \u2014 profile overview",
-          "caption": "Actual profile widget with fictional business data. Contact actions and profile narrative.",
-          "state_id": "mobile-expanded",
-          "subject_id": "fictional-juniper-workshop",
-          "selector_strategy": "Flutter widget types, scroll-view key, and visible item text",
+          "caption": "Responsive mobile layout showing watercolor header, contact actions, and narrative.",
+          "state_id": "mobile-overview",
+          "subject_id": "andale-taqueria",
+          "selector_strategy": "Flutter accessibility labels and text",
           "action_path": [
-            "render profile widget with synthetic fixture"
+            "open business profile",
+            "adapt to mobile viewport"
           ],
           "viewport": {
-            "width": 400,
-            "height": 800
+            "width": 430,
+            "height": 932
           },
-          "sha256": "a72c16e85d4b9962d6c63aacbb29732328a95b71a852f12534ef33ec8a263432"
+          "sha256": "f72da168f8bf809c81e25ee81a686fc22e54453761ead1c2c0d3002249405553"
         },
         {
           "path": "media/profile-mobile-catalog.png",
           "title": "Mobile \u2014 catalog detail",
-          "caption": "Actual profile widget with fictional business data. Scrolled catalog with Sketchbook expanded.",
-          "state_id": "mobile-collapsed",
-          "subject_id": "fictional-juniper-workshop",
-          "selector_strategy": "Flutter widget types, scroll-view key, and visible item text",
+          "caption": "Responsive mobile catalog with Pork Pastor Taco offering expanded.",
+          "state_id": "mobile-catalog",
+          "subject_id": "andale-taqueria",
+          "selector_strategy": "Flutter accessibility labels and text",
           "action_path": [
-            "render profile widget with synthetic fixture",
-            "drag profile scroll view upward",
-            "ensure Sketchbook is visible",
-            "tap Sketchbook",
-            "wait for description"
+            "open business profile",
+            "adapt to mobile viewport",
+            "scroll to catalog",
+            "expand 'Pork Pastor Taco'"
           ],
           "viewport": {
-            "width": 400,
-            "height": 800
+            "width": 430,
+            "height": 932
           },
-          "sha256": "2f01754093b59ab45df3f7301207ebbb53ff8bcbea8eda901e28b806364afe50"
+          "sha256": "a32e28cef100a33c5df3464f499106f3ca363394cad6db40e7f7fa3972211175"
         }
       ]
     }

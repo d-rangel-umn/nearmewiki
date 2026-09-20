@@ -4,38 +4,45 @@
 
 NearMeWiki is a local discovery prototype that brings business information into a map-first interface. Search for a place or an offering, explore catalog sections, and open a profile with practical details and source links.
 
-This repository presents the product and its architecture. The screenshots render the actual profile UI using a fictional business. The implementation and research pipeline are maintained privately.
+This repository presents the product and its architecture through actual captures of the running application. Featured screenshots showcase Andale Taqueria & Mercado with explicit owner permission. The core implementation and research pipeline are maintained privately.
 
-![NearMeWiki profile overview with fictional business data](media/profile-desktop-overview.png)
+![NearMeWiki map and local search](media/map-andale.png)
 
 ## Product tour
 
 | Experience | What it helps people do |
 | --- | --- |
-| Map and search | Find places and offerings in a geographic context. |
-| Business profiles | Read an overview, browse a catalog, and access hours, directions, website, and phone actions. |
-| Discover | Browse offerings across businesses through catalog sections. |
-| Source disclosure | Inspect the source links associated with a profile. |
-| Research progress | Follow the progression from selecting a place to preparing a profile. |
+| Map and search | Find places and offerings in a geographic context with live vector map tiles. |
+| Business profiles | Read an overview, browse an extensive catalog, and access hours, directions, website, and phone actions. |
+| Discover | Browse offerings across businesses through categorized catalog sections. |
+| Source disclosure | Inspect verified source links and provenance associated with a profile. |
+| Research pipeline | Transform official business websites into structured, searchable profiles with validation. |
 
-Read the [feature tour](docs/feature-tour.md), explore the [architecture](docs/architecture.md), or inspect a [fictional example](examples/fictional-business.json).
+Read the [feature tour](docs/feature-tour.md), explore the [architecture](docs/architecture.md), or inspect a [sample data format](examples/fictional-business.json).
 
-## Responsive profile experience
+## Desktop experience
 
-<img src="media/profile-mobile-overview.png" alt="Mobile profile overview, fictional Juniper Workshop" width="320" />
-<img src="media/profile-mobile-catalog.png" alt="Mobile catalog with an expanded fictional offering" width="320" />
+![NearMeWiki profile overview](media/profile-desktop-overview.png)
 
-These are component captures, not a recording of a running map or a hosted service. See the [capture notes](docs/capture-notes.md) for provenance and coverage.
+## Responsive mobile experience
+
+<p align="center">
+  <img src="media/profile-mobile-overview.png" alt="Mobile profile overview" width="360" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="media/profile-mobile-catalog.png" alt="Mobile catalog with expanded offering" width="360" />
+</p>
+
+See the [capture notes](docs/capture-notes.md) for provenance, viewport dimensions, and coverage details.
 
 ## Engineering approach
 
-- Flutter presents the map, search, discovery, and profile views.
-- A Python/FastAPI service serves structured business information from PostgreSQL.
-- A separate research workflow prepares structured profiles with source references and validation.
-- Text facts and media have separate review paths; prototype availability does not establish publication rights.
+- **Frontend:** Flutter web application delivering responsive map navigation, custom vector tile styling, and modal profile sheets.
+- **Backend:** Python/FastAPI service serving high-performance geospatial search and structured catalog data from PostgreSQL/PostGIS.
+- **AI Research Pipeline:** Converts official business websites into structured, searchable profiles with source citations, confidence scoring, and schema validation.
+- **Content Governance:** Ephemeral text processing, strict separation of factual data from protected media, and explicit rights verification before publication.
 
 ## Status and scope
 
-NearMeWiki is a prototype. This presentation does not offer a public API, hosted demo, or runnable application. All business details in the included examples and screenshots are fictional; `example.com` links are illustrative.
+NearMeWiki is an active prototype. This presentation repository documents the architecture and UX flows; it does not offer a public API, hosted demo, or runnable multi-container stack.
 
-The public material intentionally stops at product behavior and a high-level architecture. Internal prompts, algorithms, evaluation results, datasets, provider configuration, and development history are outside this repository.
+The public material intentionally stops at product behavior and high-level architecture. Internal prompts, retrieval heuristics, evaluation benchmarks, and proprietary operational configs remain in private repositories.
