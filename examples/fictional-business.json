@@ -1,0 +1,37 @@
+{
+  "example_only": true,
+  "business": {
+    "name": "Juniper Workshop (fictional)",
+    "address": "100 Example Lane, Demo City",
+    "website": "https://example.com",
+    "description": "A fictional neighborhood workshop for art supplies and small-group classes."
+  },
+  "catalog": [
+    {
+      "section": "Art supplies",
+      "items": [
+        "Sketchbook",
+        "Watercolor set",
+        "Drawing pencils"
+      ]
+    },
+    {
+      "section": "Workshops",
+      "items": [
+        "Intro to sketching",
+        "Color workshop",
+        "Open studio"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Illustrative source link",
+      "url": "https://example.com/catalog"
+    }
+  ],
+  "notes": [
+    "All business details are invented.",
+    "This simplified presentation example is not the internal API or research schema."
+  ]
+}
